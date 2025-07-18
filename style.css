@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    background-color: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    text-align: center;
+}
+
+#timer-display{
+    font-size: 200px;
+    margin: 20px;
+    color: #9fecff;
+    text-shadow: 0 0 20px rgb(65, 131, 230);
+}
+
+.controls input, .controls button {
+  font-size: 20px;
+  margin: 3px;
+  padding: 5px;
+  border: #1f9fa1;
+  text-shadow: 0 0 20px #ffffff;
+  border-radius: 9px;
+}
+
+input{
+    width: 150px;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 30px;          
+    height: 40px;
+    border: 20px solid rgb(186, 186, 88);
+    border-radius: 30px; 
+    font-size: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(90, 70, 70, 0.3);
+}
+
+button:hover {
+    background-color: rgb(5, 217, 185);
+    color: rgb(255, 255, 255);
+}
