@@ -1,6 +1,3 @@
-
-
-
 let timer = null;
 let totalSeconds = 0;
 let isRunning = false;
@@ -40,8 +37,6 @@ const alarmSound = document.getElementById("alarm-sound");
 
 function startTimer() {
     if (isRunning) return;
-    
-    // If this is a fresh start (not resuming)
     if (pausedTime === 0) {
         const hour = parseInt(hourInput.value) || 0;
         const min = parseInt(minutesInput.value) || 0;
@@ -54,8 +49,6 @@ function startTimer() {
         }
         
         startTime = new Date();
-        
-        // Warm up the alarm sound
         alarmSound.play().then(() => {
             alarmSound.pause();
             alarmSound.currentTime = 0;
@@ -109,8 +102,6 @@ function resetTimer() {
     startBtn.disabled = false;
     pauseBtn.disabled = true;
     startBtn.textContent = "▶";
-    
-    // Clear inputs
     hourInput.value = '';
     minutesInput.value = '';
     secondsInput.value = '';
