@@ -1,16 +1,26 @@
 body{
     display: flex;
-    background-color: rgb(17, 17, 17);
+    background-color: #000000;
     color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 200vh;
+    margin: 0px
+    overflow-y:auto;
+}
+
+h2{
+    font-size: 40px;
+    text-underline-position: auto;
 }
 
 .container{
     text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 320px;
+    transition: margin 0.3s ease;
 }
 
 #timer-display{
@@ -51,4 +61,147 @@ button {
 button:hover {
     background-color: rgb(5, 217, 185);
     color: rgb(255, 255, 255);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.study-log {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+.log-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.log-inputs input, .log-inputs textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #444;
+    background-color: #222;
+    color: rgb(255, 255, 255);
+}
+
+.log-inputs textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+#save-log-btn {
+    background-color: #28849b;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: auto;
+    min-width: 12px;
+    height: 30px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+}
+#save-log-btn:hover{
+    background-color: #1ed760;
+    transform: scale(1.04);
+}
+
+.log-entries {
+    text-align: left;
+}
+
+.log-entry {
+    background-color: #222;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 4px solid #9fecff;
+}
+
+.log-entry h4 {
+    margin: 0 0 5px 0;
+    color: #9fecff;
+}
+
+.log-entry p {
+    margin: 5px 0;
+}
+
+.spotify-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.spotify-sidebar h3 {
+    color: #9fecff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.music-player {
+    margin-bottom: 20px;
+}
+
+#toggle-music {
+    background-color: #9fecff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+#toggle-music:hover {
+    background-color: #1ed760;
+    transform: scale(1.02);
+}
+
+.container {
+    margin-left: 320px; 
+    transition: margin 0.3s ease;
+}
+
+
+.sidebar-hidden {
+    transform: translateX(-300px);
+}
+
+.sidebar-hidden + .container {
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .spotify-sidebar {
+        width: 250px;
+    }
+    
+    .container {
+        margin-left: 270px;
+    }
+    
+    .sidebar-hidden + .container {
+        margin-left: 20px;
+    }
 }
